@@ -1,3 +1,28 @@
+# Potential issue - Proof of Concept
+
+Use `npm` or `yarn` to install and start the project.
+
+In `/src/files` directory there are two example files representing unwanted executables masked as an excel spreadsheet - `.xlsx`.
+
+- `cpu-z.exe;.xlsx` is a windows installation of popular hardware monitor tool `CPU-Z`.
+- `example-shell.sh;.xlsx` is an example script that echoes `Hello World`.
+
+After starting the application links are visible on the screen.
+
+## Reproduction steps
+
+- Click on one of the links.
+- Chrome starts the download of the file as `{filename}.{dangerous-extension}`, everything after semicolon (`;`) gets sanitized, and user downloads the dangerous content onto it's machine.
+- Warning message is not displayed on Windows.
+
+## Notes
+
+This is reproducible on Chrome on Windows, Chrome on Linux will download the file as an executable but will show a warning first.
+
+On Firefox, download keeps the original extension of the file - `{filename}.{dangerous-extension};.{allowed-extension}`.
+
+# Create React App Readme
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

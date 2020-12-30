@@ -2,10 +2,11 @@
 
 Use `npm` or `yarn` to install and start the project.
 
-In `/src/files` directory there are two example files representing unwanted executables masked as an excel spreadsheet - `.xlsx`.
+In `/src/files` directory there are three example files representing unwanted executables masked as an excel spreadsheet - `.xlsx`.
 
 - `cpu-z.exe;.xlsx` is a windows installation of popular hardware monitor tool `CPU-Z`.
 - `example-shell.sh;.xlsx` is an example script that echoes `Hello World`.
+- `ngrok;.xlsx` is an executable for the popular tunnel.
 
 After starting the application links are visible on the screen.
 

@@ -12,6 +12,7 @@
     }
   </style>
 </head>
+
 <body>
   <input type="file" id="fileinput" />
 <h1>Browserify Example</h1>
